@@ -1,0 +1,53 @@
+<div class="layout">
+  <header class="header">
+    Proyectos Sebastian
+  </header>
+
+<nav class="top-menu">
+  <ul>
+    <li (click)="seleccionarProyecto('proyecto1')">
+      Proyecto 1
+      <span class="tooltip">
+        <strong>Proyecto 1:</strong><br>
+        <img src="https://via.placeholder.com/50" alt="Proyecto1" />
+      </span>
+    </li>
+    <li (click)="seleccionarProyecto('proyecto2')">
+      Proyecto 2
+      <span class="tooltip">
+        <strong>Proyecto 2:</strong><br>
+        <img src="https://via.placeholder.com/50/ff8a65/fff" alt="Proyecto2" />
+      </span>
+    </li>
+    <li (click)="seleccionarProyecto('proyecto3')">
+      Proyecto 3
+      <span class="tooltip">
+        <strong>Proyecto 3:</strong><br>
+        <img src="https://via.placeholder.com/50/ff6f61/fff" alt="Proyecto3" />
+      </span>
+    </li>
+  </ul>
+</nav>
+
+<main class="main">
+  <aside class="sidebar">
+    <ng-container [ngSwitch]="proyectoActual">
+      <app-proyecto1-lateral *ngSwitchCase="'proyecto1'"></app-proyecto1-lateral>
+      <app-proyecto2-lateral *ngSwitchCase="'proyecto2'"></app-proyecto2-lateral>
+      <app-proyecto3-lateral *ngSwitchCase="'proyecto3'"></app-proyecto3-lateral>
+    </ng-container>
+  </aside>
+
+  <section class="content">
+    <ng-container [ngSwitch]="proyectoActual">
+      <app-proyecto1-contenido *ngSwitchCase="'proyecto1'"></app-proyecto1-contenido>
+      <app-proyecto2-contenido *ngSwitchCase="'proyecto2'"></app-proyecto2-contenido>
+      <app-proyecto3-contenido *ngSwitchCase="'proyecto3'"></app-proyecto3-contenido>
+    </ng-container>
+  </section>
+</main>
+
+  <footer class="footer">
+    © 2025 Sebastian - Todos los derechos reservados
+  </footer>
+</div>

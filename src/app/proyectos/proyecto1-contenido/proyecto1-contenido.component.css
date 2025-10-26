@@ -1,0 +1,11 @@
+.proyecto1-contenido a {
+  color: #FF6F61; /* mismo naranja que el header/footer */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.proyecto1-contenido a:hover {
+  color: #FF8A65; /* cambio de color al pasar el mouse */
+  text-decoration: underline;
+}
