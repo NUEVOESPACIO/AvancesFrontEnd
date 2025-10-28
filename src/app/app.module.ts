@@ -13,7 +13,9 @@ import { Proyecto3LateralComponent } from './proyectos/proyecto3-lateral/proyect
 import { Proyecto3ContenidoComponent } from './proyectos/proyecto3-contenido/proyecto3-contenido.component';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from './interceptors/auth'
+import { AuthInterceptor } from './interceptors/auth';
+import { Proyecto3ContenidoIzqComponent } from './proyectos/proyecto3-contenido/proyecto3-contenido-izq/proyecto3-contenido-izq.component';
+import { Proyecto3ContenidoMainComponent } from './proyectos/proyecto3-contenido/proyecto3-contenido-main/proyecto3-contenido-main.component'
 
 
 
@@ -25,7 +27,9 @@ import { AuthInterceptor } from './interceptors/auth'
     Proyecto2LateralComponent,
     Proyecto2ContenidoComponent,
     Proyecto3LateralComponent,
-    Proyecto3ContenidoComponent
+    Proyecto3ContenidoComponent,
+    Proyecto3ContenidoIzqComponent,
+    Proyecto3ContenidoMainComponent
   ],
   imports: [
     BrowserModule,

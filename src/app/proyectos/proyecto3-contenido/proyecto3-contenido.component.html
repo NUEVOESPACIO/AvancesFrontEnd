@@ -1,1 +1,19 @@
-<p>proyecto3-contenido works!</p>
+<div class="flex flex-col h-screen">
+  <!-- HEADER -->
+  <header class="bg-blue-600 text-white p-4 text-xl font-bold">
+    Este es el header fijo pra describir le proyecto de Astronmia
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="flex flex-1 overflow-hidden">
+    <!-- IZQUIERDA -->
+    <aside class="w-1/4 bg-gray-200 p-4 overflow-y-auto">
+      <app-proyecto3-contenido-izq></app-proyecto3-contenido-izq>
+    </aside>
+
+    <!-- DERECHA -->
+    <main class="flex-1 p-4 overflow-y-auto">    
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
