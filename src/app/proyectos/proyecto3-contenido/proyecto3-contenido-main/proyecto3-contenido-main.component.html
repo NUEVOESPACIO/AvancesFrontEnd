@@ -1,1 +1,64 @@
-<p>proyecto3-contenido-main works!</p>
+<div class="login-container">
+  <h2>Iniciar sesión</h2>
+
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <div class="form-group">
+      <label for="username">Usuario</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        [(ngModel)]="username"
+        required
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Contraseña</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+        class="form-control"
+      />
+    </div>
+
+    <button type="submit" [disabled]="!loginForm.valid">Ingresar</button>
+
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </form>
+</div>
+
+<div class="auth-steps">
+  <h2>Frontend: Flujo de Ingreso</h2>
+  <ul>
+    <li>El formulario envía las credenciales mediante HTTP POST a la API.</li>
+    <li>Al hacer click en "Ingresar", se dispara el evento <code>onSubmit()</code>.</li>
+    <li>El botón se encuentra en <code>*.component.html</code> y el comportamiento se maneja en <code>*.component.ts</code>.</li>
+    <li><code>onSubmit()</code> es un método de la clase <b>Proyecto2ContenidoComponent</b>.</li>
+    <li>Las credenciales son propiedades de la clase y se envían al servicio inyectado en el constructor.</li>
+    <li>El servicio realiza la consulta a la API mediante su método <code>login</code>, que devuelve un <i>Observable</i>.</li>
+    <li>El servicio utiliza <code>HttpClient</code> para hacer la llamada HTTP real.</li>
+    <li>Si el login es exitoso, la API devuelve un token que se guarda en <code>localStorage</code>.</li>
+    <li>Si el login falla, se muestra un mensaje de error en el template usando la variable <code>errorMessage</code>.</li>
+  </ul>
+
+  <h2>Backend: Flujo de Autenticación</h2>
+  <ul>
+    <li>El backend corre en un puerto y recibe la petición POST en un endpoint determinado.</li>
+    <li>Primero se activa la capa de seguridad definida en <code>SecurityConfig.java</code>.</li>
+    <li>Esta clase tiene dos <code>@Bean</code> embebidos:</li>
+      <ul>
+        <li>El primero verifica si el endpoint está protegido o no. El endpoint de login normalmente no lo está.</li>
+        <li>El segundo se encarga de gestionar CORS, permitiendo consultas desde <code>localhost:4200</code> de forma global.</li>
+      </ul>
+    <li>Luego se ejecuta el <code>JwtAuthenticationFilter</code>, que valida al usuario y, si es correcto, genera el token.</li>
+    <li>El token se devuelve al frontend, que lo incluye en todas las peticiones posteriores.</li>
+  </ul>
+
+  <p>💡 Todos estos comentarios sirven para fijar y mejorar los conceptos, además de tener un código más claro y documentado.</p>
+</div>
+
