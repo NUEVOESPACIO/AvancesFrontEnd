@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Proyecto3ContenidoComponent implements OnInit {
 
+  rol: string = "";
+
   constructor() { }
 
   ngOnInit(): void {
-  }
+    const rolaux = localStorage.getItem('ROLE');
+    if (rolaux) {
+      this.rol = rolaux;
+    } else {
+      this.rol = "";
+    }
 
+    console.log("Rol detectado:", this.rol);
+  }
 }

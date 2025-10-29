@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../../servicios/auth'
+import { Proy3serviciohabilitacionesService } from '../../proy3serviciohabilitaciones.service'
 
 @Component({
   selector: 'app-proyecto3-contenido-main',
@@ -11,7 +12,7 @@ export class Proyecto3ContenidoMainComponent {
   password = '';
   errorMessage = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService,private permService: Proy3serviciohabilitacionesService) {}
 
   onSubmit() {
     this.authService.login(this.username, this.password).subscribe({
@@ -19,7 +20,7 @@ export class Proyecto3ContenidoMainComponent {
         // Guardar token en localStorage
         localStorage.setItem('authToken', response.token);
         this.errorMessage="Ingreso Exitoso";
-        console.log('Login exitoso');
+         this.permService.setUserRoles(['ROLE_ADMIN']);
       },
       error: () => {
         this.errorMessage = 'Credenciales incorrectas';
