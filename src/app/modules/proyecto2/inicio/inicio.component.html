@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proyecto de Astronomía</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at 20% 30%, #0b1220 0%, #020617 100%);
+      color: #f0f4f8;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://raw.githubusercontent.com/akzhy/VantaJS-examples/master/images/stars.png');
+      background-size: cover;
+      opacity: 0.2;
+      z-index: -1;
+    }
+    .logo {
+      font-size: 80px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    p {
+      max-width: 600px;
+      line-height: 1.6;
+      font-size: 16px;
+      color: #d1d5db;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="logo">🚀</div>
+  <h1>Bienvenido a mi Proyecto de Astronomía</h1>
+  <p>
+    Este proyecto está realizado en <strong>Angular</strong>, y usa como backend <strong>Spring</strong>.<br>
+    Estoy en proceso de armado — estamos a <strong>noviembre de 2025</strong> — y la idea es que se puedan trabajar los CRUD para usuarios con distintos roles.
+  </p>
+  <p>Si quieres hacer <strong>Login</strong>, usa el menú de navegación lateral izquierda.</p>
+</body>
+</html>

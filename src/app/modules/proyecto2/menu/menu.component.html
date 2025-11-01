@@ -1,0 +1,10 @@
+<nav class="flex flex-col gap-2">
+<a routerLink="inicio" class="btn">Inicio</a>
+  <a *ngFor="let btn of buttons"
+     [routerLink]="btn.route"
+     class="btn"
+     [class.disabled]="btn.featureKey && !permService.canAccess(btn.featureKey)">
+    {{ btn.label }}
+  </a>
+</nav>
+
