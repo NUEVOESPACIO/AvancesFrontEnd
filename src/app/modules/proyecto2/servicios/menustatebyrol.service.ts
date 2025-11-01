@@ -5,12 +5,26 @@ import { Injectable } from '@angular/core';
 export class MenustatebyrolService {
 
   private roles: string[] = [];
+  private id?:number;
 
   constructor() { }
 
   setUserRoles(roles: string[]) {
     this.roles = roles;
   }
+
+  getUserRoles() {
+    return this.roles;
+  }
+
+  setId(id: number) {
+    this.id = id;
+  }
+
+  getId() {
+    return this.id;
+  }
+
 
   canAccess(feature: string): boolean {
     switch (feature) {
@@ -36,4 +50,5 @@ export class MenustatebyrolService {
         return true;
     }
   }
+  
 }

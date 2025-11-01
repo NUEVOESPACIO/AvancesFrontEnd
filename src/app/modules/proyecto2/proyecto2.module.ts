@@ -10,6 +10,7 @@ import { VerplanetasComponent } from './verplanetas/verplanetas.component';
 import { VersimulacionesComponent } from './versimulaciones/versimulaciones.component';
 import { AuthService } from './servicios/auth.service';
 import { MenustatebyrolService } from './servicios/menustatebyrol.service';
+import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MenustatebyrolService } from './servicios/menustatebyrol.service';
     MenuComponent,
     MainComponent,
     VerplanetasComponent,
-    VersimulacionesComponent
+    VersimulacionesComponent,
+    BienvenidaComponent
   ],
   imports: [
     CommonModule,
