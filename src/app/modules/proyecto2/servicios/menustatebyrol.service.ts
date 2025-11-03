@@ -6,6 +6,11 @@ export class MenustatebyrolService {
 
   private roles: string[] = [];
   private id?:number;
+  private username?:String;
+  private nombre?:String;
+  private apellido?: String;
+  private email?: String;
+  
 
   constructor() { }
 
@@ -24,6 +29,43 @@ export class MenustatebyrolService {
   getId() {
     return this.id;
   }
+
+
+    setUsername(username: string) {
+    this.username = username;
+  }
+
+  getUsername() {
+    return this.username;
+  }
+
+
+    setApellido(apellido: string) {
+    this.apellido = apellido;
+  }
+
+  getApellido() {
+    return this.apellido;
+  }
+
+
+    setNombre(nombre: string) {
+    this.nombre = nombre;
+  }
+
+  getNombre() {
+    return this.nombre;
+  }
+
+
+    setEmail(email: string) {
+    this.email = email;
+  }
+
+  getEmail() {
+    return this.email;
+  }
+
 
 
   canAccess(feature: string): boolean {

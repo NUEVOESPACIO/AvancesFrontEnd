@@ -27,7 +27,13 @@ export class MainComponent {
         localStorage.setItem('authToken', response.token);
         this.errorMessage = `Ingreso Exitoso para ${response.rol}`;
         this.permService.setUserRoles([response.rol]);
+        
         this.permService.setId(response.id);
+        this.permService.setUsername(response.username);
+        this.permService.setNombre(response.nombre);
+        this.permService.setApellido(response.apellido);
+        this.permService.setEmail(response.email);
+
         this.router.navigate(['bienvenida'], { relativeTo: this.route.parent });
       },
       error: () => {
