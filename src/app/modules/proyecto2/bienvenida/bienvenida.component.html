@@ -1,4 +1,30 @@
-<p>{{rol}}</p>{{id}}
-<p>{{username}}</p>{{nombre}}
-<p>{{apellido}}</p>{{email}}
+<div class="welcome-container">
+  <!-- Mensaje de bienvenida -->
+  <div class="welcome-message">
+    <h1>¡Bienvenido, {{ nombre }} {{ apellido }}!</h1>
+    <p>Gracias por visitar, tu rol es: <strong>{{ rol }}</strong></p>
+    <p>y tu nombre de Usuario es <strong>{{ rol }}</strong></p>
+  </div>
 
+  <!-- Formulario para editar los datos -->
+  <div class="edit-form">
+    <h2>Si quieres actualizar tus datos puedes comentar el siguiente formulario:</h2>
+    
+    <form (ngSubmit)="actualizarDatos()">
+      <div class="input-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required />
+      </div>
+      <div class="input-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" [(ngModel)]="apellido" name="apellido" required />
+      </div>
+      <div class="input-group">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required />
+      </div>
+
+      <button type="submit" class="btn-update">Actualizar</button>
+    </form>
+  </div>
+</div>

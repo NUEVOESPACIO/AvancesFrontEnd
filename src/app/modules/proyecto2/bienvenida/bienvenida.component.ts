@@ -28,4 +28,22 @@ export class BienvenidaComponent implements OnInit {
 
   }
 
+    actualizarDatos() {
+    // Llamada al servicio para actualizar los datos
+    //this.userService.actualizarUsuario({
+    //  nombre: this.nombre,
+    //  apellido: this.apellido,
+    //  email: this.email
+    //}).subscribe(
+    //  response => {
+    //    // Lógica para manejar la respuesta del servidor
+    //    console.log('Datos actualizados con éxito', response);
+    //  },
+    //  error => {
+    //    // Lógica para manejar errores
+    //    console.error('Error al actualizar los datos', error);
+      }
+    
+
+
 }
