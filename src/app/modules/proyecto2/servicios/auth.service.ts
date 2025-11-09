@@ -15,17 +15,17 @@ export class AuthService {
     return this.http.post<{ token: string }>(this.apiUrl, { username, password }).pipe(
       tap(response => {
         this.token = response.token;
-        localStorage.setItem('authToken', response.token);
+        localStorage.setItem('authTokenProyect2', response.token);        
       })
     );
   }
 
   getToken(): string | null {
-    return this.token || localStorage.getItem('authToken');
+    return this.token || localStorage.getItem('authTokenProyect2');
   }
 
   logout() {
     this.token = null;
-    localStorage.removeItem('authToken');
+    localStorage.removeItem('authTokenProyect2');
   }
 }

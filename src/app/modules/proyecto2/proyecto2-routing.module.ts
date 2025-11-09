@@ -11,13 +11,13 @@ const routes: Routes = [
   {
     path: '',
     component: Proyecto2Component,
-    children: [
-      { path: '', redirectTo: 'inicio', pathMatch: 'full' },
+    children: [    
       { path: 'inicio', component: InicioComponent },
       { path: 'main', component: MainComponent },
       { path: 'versimulaciones', component: VersimulacionesComponent },
       { path: 'verplanetas', component: VerplanetasComponent },
       { path: 'bienvenida', component: BienvenidaComponent },
+        { path: '', redirectTo: 'inicio', pathMatch: 'full' }
     ],
   }
 ];

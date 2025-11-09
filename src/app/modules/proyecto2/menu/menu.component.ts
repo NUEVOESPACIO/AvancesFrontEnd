@@ -14,8 +14,9 @@ interface FeatureButton {
 })
 export class MenuComponent implements OnInit {
   buttons: FeatureButton[] = [
+    { label: 'Inicio', route: '/proyecto2/inicio', featureKey: 'INICIO' },
     { label: 'Login', route: '/proyecto2/main', featureKey: 'LOGIN' },
-    { label: 'Bienvenida', route: '/proyecto2/bienvenida', featureKey: 'BIENVENIDA & PERFIL' },
+    { label: 'Bienvenida', route: '/proyecto2/bienvenida', featureKey: 'BIENVENIDA_PERFIL' },
     { label: 'Consulta Cuerpos Celestes', route: '/proyecto2/verplanetas', featureKey: 'CONSULTA_CUERPOS_CELESTES' },
     { label: 'ABM Cuerpos Celestes', route: '/proyecto2/abmplanetas', featureKey: 'ABM_CUERPOS_CELESTES' },
     { label: 'Consulta Simulaciones', route: '/proyecto2/versimulaciones', featureKey: 'CONSULTA_SIMULACIONES' },
@@ -28,6 +29,7 @@ export class MenuComponent implements OnInit {
   constructor(public permService: MenustatebyrolService) { }
 
   ngOnInit(): void {
-    this.permService.setUserRoles(['']);
+   
   }
+
 }

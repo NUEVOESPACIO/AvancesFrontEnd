@@ -13,15 +13,15 @@
     <form (ngSubmit)="actualizarDatos()">
       <div class="input-group">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required />
+        <input type="text" id="nombre" [(ngModel)]="nombre2" name="nombre" required />
       </div>
       <div class="input-group">
         <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" [(ngModel)]="apellido" name="apellido" required />
+        <input type="text" id="apellido" [(ngModel)]="apellido2" name="apellido" required />
       </div>
       <div class="input-group">
         <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" [(ngModel)]="email" name="email" required />
+        <input type="email" id="email" [(ngModel)]="email2" name="email" required />
       </div>
 
       <button type="submit" class="btn-update">Actualizar</button>

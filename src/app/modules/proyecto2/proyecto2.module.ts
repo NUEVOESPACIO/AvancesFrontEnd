@@ -11,6 +11,7 @@ import { VersimulacionesComponent } from './versimulaciones/versimulaciones.comp
 import { AuthService } from './servicios/auth.service';
 import { MenustatebyrolService } from './servicios/menustatebyrol.service';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+import { AbmsService } from './servicios/abms.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,11 @@ import { BienvenidaComponent } from './bienvenida/bienvenida.component';
   ],
   providers: [
     AuthService,            // ✅ servicios locales
-    MenustatebyrolService
+    MenustatebyrolService,
+    AbmsService
+
   ]
+
+  
 })
 export class Proyecto2Module { }

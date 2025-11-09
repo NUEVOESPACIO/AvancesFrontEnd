@@ -19,21 +19,18 @@ export class MainComponent {
     private permService: MenustatebyrolService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   onSubmit() {
     this.authService.login(this.username, this.password).subscribe({
       next: (response) => {
-        localStorage.setItem('authToken', response.token);
         this.errorMessage = `Ingreso Exitoso para ${response.rol}`;
         this.permService.setUserRoles([response.rol]);
-        
         this.permService.setId(response.id);
         this.permService.setUsername(response.username);
         this.permService.setNombre(response.nombre);
         this.permService.setApellido(response.apellido);
         this.permService.setEmail(response.email);
-
         this.router.navigate(['bienvenida'], { relativeTo: this.route.parent });
       },
       error: () => {
