@@ -16,7 +16,7 @@ export class AbmsService {
 
   datausermodif(nombre: string, apellido: string, email: string): Observable<any> {
     // Obtener el token desde el localStorage
-    const token = localStorage.getItem('AuthTokenProyecto2'); // Asegúrate de que 'token' sea la clave correcta
+    const token = localStorage.getItem('authTokenProyect2'); // Asegúrate de que 'token' sea la clave correcta
     var idx: number=this.permService.getId();
 
     // Configurar los headers con el token

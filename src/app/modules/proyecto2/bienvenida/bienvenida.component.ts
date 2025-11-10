@@ -51,6 +51,7 @@ export class BienvenidaComponent implements OnInit {
               this.permService.setEmail(this.email2);              
     
           // Aquí podrías mostrar un mensaje visual o un snackbar
+        
         },
         error: (error) => {
           console.error('Error al actualizar los datos', error);
@@ -58,6 +59,7 @@ export class BienvenidaComponent implements OnInit {
         },
         complete: () => {
           console.log('Petición PATCH completada');
+          
         }
       });
   }

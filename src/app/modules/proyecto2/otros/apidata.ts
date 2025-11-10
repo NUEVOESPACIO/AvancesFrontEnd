@@ -1,3 +1,3 @@
 export const API_ENDPOINTS = {
-  baseurlauth:"http://localhost:8080/auth/login"
+  baseurlauth:"http://localhost:8080"
 };
