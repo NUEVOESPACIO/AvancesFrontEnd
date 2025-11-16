@@ -12,6 +12,7 @@ import { AuthService } from './servicios/auth.service';
 import { MenustatebyrolService } from './servicios/menustatebyrol.service';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { AbmsService } from './servicios/abms.service';
+import { AbmusuariosComponent } from './abmusuarios/abmusuarios.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AbmsService } from './servicios/abms.service';
     MainComponent,
     VerplanetasComponent,
     VersimulacionesComponent,
-    BienvenidaComponent
+    BienvenidaComponent,
+    AbmusuariosComponent
   ],
   imports: [
     CommonModule,

@@ -6,6 +6,7 @@ import { VersimulacionesComponent } from './versimulaciones/versimulaciones.comp
 import { VerplanetasComponent } from './verplanetas/verplanetas.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+import { AbmusuariosComponent } from './abmusuarios/abmusuarios.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'versimulaciones', component: VersimulacionesComponent },
       { path: 'verplanetas', component: VerplanetasComponent },
       { path: 'bienvenida', component: BienvenidaComponent },
+      { path: 'abmusuarios', component: AbmusuariosComponent },
     
     ],
   }

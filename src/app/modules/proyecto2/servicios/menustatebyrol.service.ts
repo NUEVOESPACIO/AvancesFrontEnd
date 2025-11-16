@@ -90,6 +90,7 @@ export class MenustatebyrolService {
         return this.roles.some(r => ['ROLE_ADMIN'].includes(r));
       case 'LOGOUT':
         return this.roles.some(r => ['ROLE_ADMIN', 'ROLE_VISIT', 'ROLE_ASTRONOMO', 'ROLE_CIENTIFICO'].includes(r));
+        
       default:
         return true;
     }
